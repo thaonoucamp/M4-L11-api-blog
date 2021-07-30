@@ -13,11 +13,11 @@
         <th>Author</th>
         <th>View</th>
     </tr>
-    <th:block th:each="blog : ${blogs}">
+    <th:block th:each="product : ${blogs}">
         <tr>
-            <td th:text="${blog.title}"></td>
-            <td th:text="${blog.author}"></td>
-            <td><a th:href="@{/view-blog/__${blog.id}__}">View</a></td>
+            <td th:text="${product.title}"></td>
+            <td th:text="${product.author}"></td>
+            <td><a th:href="@{/view-product/__${product.id}__}">View</a></td>
         </tr>
     </th:block>
 </table>

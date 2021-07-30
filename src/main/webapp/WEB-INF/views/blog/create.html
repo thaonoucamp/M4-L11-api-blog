@@ -2,33 +2,33 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create customer</title>
+    <title>Create product</title>
 </head>
 <body>
-<h1>Create blog</h1>
+<h1>Create product</h1>
 <p>
-    <a href="/home">Blog list</a>
+    <a href="/home">product list</a>
 </p>
 <th:block th:if="${message}">
     <h4 th:text="${message}" style="color: blue"></h4>
 </th:block>
-<form th:action="@{/create-blog}" th:object="${blog}" method="post">
+<form th:action="@{/create-product}" th:object="${product}" method="post">
     <table>
         <tr>
-            <td>Title:</td>
-            <td><textarea th:field="*{title}" cols="100" rows="2"/></td>
+            <td>name:</td>
+            <td><textarea th:field="*{name}" cols="100" rows="2"/></td>
         </tr>
         <tr>
-            <td>Content:</td>
-            <td><textarea th:field="*{content}" cols="200" rows="5"/></td>
+            <td>price:</td>
+            <td><textarea th:field="*{price}" cols="200" rows="5"/></td>
         </tr>
         <tr>
-            <td>Author:</td>
-            <td><input type="text" th:field="*{author}"/></td>
+            <td>quantity:</td>
+            <td><input type="text" th:field="*{quantity}"/></td>
         </tr>
         <tr>
-            <td>Date</td>
-            <td><input type="date" th:field="*{date}"></td>
+            <td>color:</td>
+            <td><input type="text" th:field="*{color}"></td>
         </tr>
         <tr>
             <td>Category:</td>
@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Create blog"></td>
+            <td><input type="submit" value="Create product"></td>
         </tr>
     </table>
 </form>

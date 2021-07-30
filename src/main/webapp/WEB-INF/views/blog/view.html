@@ -2,34 +2,34 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>View blog</title>
+    <title>View product</title>
 </head>
 <body>
-<h1>View blog</h1>
+<h1>View product</h1>
 <p>
-    <a href="/home">Blog list</a>
+    <a href="/home">product list</a>
 </p>
 <input th:type="hidden" name="id" th:field="*{id}">
 <table>
     <tr>
-        <td>Title:</td>
-        <td th:text="${blog.title}"></td>
+        <td>Name:</td>
+        <td th:text="${product.name}"></td>
     </tr>
     <tr>
-        <td>Last name:</td>
-        <td th:text="*{blog.content}"></td>
+        <td>Price:</td>
+        <td th:text="*{product.price}"></td>
     </tr>
     <tr>
-        <td>Author:</td>
-        <td th:text="${blog.author}"></td>
+        <td>Quantity:</td>
+        <td th:text="${product.quantity}"></td>
     </tr>
     <tr>
-        <td>Date</td>
-        <td th:text="${blog.date}"></td>
+        <td>Color</td>
+        <td th:text="${product.color}"></td>
     </tr>
     <tr>
         <td>Category:</td>
-        <td th:text="${blog.category.name}"></td>
+        <td th:text="${product.category.name}"></td>
     </tr>
 </table>
 
